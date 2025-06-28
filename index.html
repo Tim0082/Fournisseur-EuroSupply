@@ -16,13 +16,10 @@
       background-color: #061943;
       padding: 20px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    }
-
-    .logo {
-      height: 60px;
+      position: relative;
+      z-index: 5;
     }
 
     nav {
@@ -40,6 +37,18 @@
 
     nav a:hover {
       color: #1e90ff;
+    }
+
+    .logo-floating {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: auto;
+      z-index: 10;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
     main {
@@ -62,6 +71,7 @@
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
       margin-bottom: 60px;
+      margin-top: 80px; /* pour compenser le logo qui dépasse */
     }
 
     .intro-section h1 {
@@ -111,7 +121,6 @@
 <body>
 
   <header>
-    <img src="logo.jpeg" alt="Logo SunWave" class="logo" />
     <nav>
       <a href="index.html">Accueil</a>
       <a href="entreprises.html">Entreprises</a>
@@ -119,8 +128,10 @@
     </nav>
   </header>
 
-  <main>
+  <!-- Logo à cheval -->
+  <img src="logo.jpeg" alt="Logo SunWave" class="logo-floating" />
 
+  <main>
     <section class="intro-section">
       <h1>🌊 Bienvenue sur <span class="highlight">SunWave RP</span></h1>
       <p>
@@ -137,7 +148,6 @@
       </p>
       <a href="https://discord.gg/sunwave" class="cta-button" target="_blank">🚀 Rejoindre l’aventure</a>
     </section>
-
   </main>
 
   <footer>
