@@ -2,54 +2,83 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>SunWave Accordéon</title>
+  <title>Règlement RP - SunWave</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-header">💀 MORT RP</button>
-      <div class="accordion-content">
-        <p>Texte sur la mort RP...</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">🏡 IMMOBILIERS</button>
-      <div class="accordion-content">
-        <p>Texte sur les immobiliers...</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">🎥 STREAMEUR</button>
-      <div class="accordion-content">
-        <h4>🚫 Il est interdit</h4>
-        <ul>
-          <li>De trashtalk ou de prendre les infos du chat.</li>
-          <li>De streamer les réunions communautaires (*interadmin*, *besoin d'aide*, etc.).</li>
-          <li>De mentionner un joueur/streamer sans accord.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">✈️ AÉRIEN</button>
-      <div class="accordion-content">
-        <p>Texte sur l’aérien...</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">📄 TICKET</button>
-      <div class="accordion-content">
-        <p>Texte pour le ticket...</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">⚠️ FAQ</button>
-      <div class="accordion-content">
-        <p>Questions fréquentes...</p>
-      </div>
-    </div>
-  </div>
 
+  <!-- Logo si besoin -->
+  <!-- <img src="logo.png" alt="Logo SunWave" class="logo-floating" /> -->
+
+  <!-- Header dynamique -->
+  <div id="include-header"></div>
+
+  <!-- Accordéon -->
+  <main>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">💀 MORT RP</button>
+        <div class="accordion-content">
+          <p>Texte sur la mort RP...</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🏡 IMMOBILIERS</button>
+        <div class="accordion-content">
+          <p>Texte sur les immobiliers...</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🎥 STREAMEUR</button>
+        <div class="accordion-content">
+          <h4>🚫 Il est interdit</h4>
+          <ul>
+            <li>De trashtalk ou de prendre les infos du chat.</li>
+            <li>De streamer les réunions communautaires (*interadmin*, *besoin d'aide*, etc.).</li>
+            <li>De mentionner un joueur/streamer sans accord.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">✈️ AÉRIEN</button>
+        <div class="accordion-content">
+          <p>Texte sur l’aérien...</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">📄 TICKET</button>
+        <div class="accordion-content">
+          <p>Texte pour le ticket...</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">⚠️ FAQ</button>
+        <div class="accordion-content">
+          <p>Questions fréquentes...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer dynamique -->
+  <div id="include-footer"></div>
+
+  <!-- Scripts -->
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("include-header").innerHTML = html;
+      });
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("include-footer").innerHTML = html;
+      });
+  </script>
   <script src="script.js"></script>
+
 </body>
 </html>
