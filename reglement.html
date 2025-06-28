@@ -6,26 +6,36 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #0a0f2c;
       color: #ffffff;
+      line-height: 1.6;
     }
 
     header {
       background-color: #061943;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5em;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px #000;
     }
 
     nav a {
       color: #ffffff;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1e90ff;
     }
 
     main {
@@ -34,19 +44,29 @@
       margin: auto;
     }
 
-    .section-title {
+    h2 {
       text-align: center;
       font-size: 1.8em;
       color: #1e90ff;
       margin-bottom: 20px;
     }
 
+    .section-title {
+      color: #1e90ff;
+      font-size: 2em;
+      border-bottom: 2px solid #1e90ff;
+      padding-bottom: 5px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
     .reglement-section {
       margin-bottom: 50px;
-      padding: 20px;
+      padding: 30px;
       background-color: #0d1436;
-      border-radius: 10px;
+      border-radius: 12px;
       border: 2px solid #1e90ff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
     .accordeon .item {
@@ -54,18 +74,31 @@
       border: 1px solid #1e90ff;
       border-radius: 8px;
       overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .accordeon .item:hover {
+      transform: scale(1.01);
+      box-shadow: 0 0 10px #1e90ff44;
     }
 
     .toggle {
       width: 100%;
-      padding: 15px;
+      padding: 15px 20px;
       background-color: #061943;
       color: white;
       border: none;
       text-align: left;
-      font-size: 1em;
+      font-size: 1.1em;
       font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle:hover,
+    .toggle:focus {
+      background-color: #1e90ff;
+      outline: none;
     }
 
     .toggle.active {
@@ -74,15 +107,23 @@
 
     .content {
       display: none;
-      padding: 15px;
+      padding: 20px;
       background-color: #0d1436;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     footer {
+      background-color: #061943;
       text-align: center;
       padding: 20px;
-      background-color: #061943;
-      color: white;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #ffffffaa;
     }
   </style>
 </head>
@@ -187,4 +228,3 @@
 
 </body>
 </html>
-
