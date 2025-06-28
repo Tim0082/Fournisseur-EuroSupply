@@ -10,6 +10,197 @@
       font-family: 'Arial', sans-serif;
       background-color: #0a0f2c;
       color: #ffffff;
+    }
+
+    .logo-floating {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 200px;
+      z-index: 10;
+      filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+    }
+
+    header {
+      background-color: #061943;
+      padding: 20px 20px 20px 240px;
+      display: flex;
+      justify-content: flex-end;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      padding: 10px 18px;
+      background-color: #1e90ff;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: #00bfff;
+      transform: translateY(-2px);
+    }
+
+    main {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .reglement-images img {
+      width: 300px;
+      margin: 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .reglement-images img:hover {
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      background-color: #0d1436;
+      margin: 80px auto;
+      padding: 30px;
+      border: 2px solid #1e90ff;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 800px;
+      color: #ffffff;
+      text-align: left;
+      position: relative;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .close {
+      color: #ffffffaa;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ffffff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background-color: #061943;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #ffffffaa;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="logo.jpeg" alt="Logo SunWave" class="logo-floating" />
+
+  <header>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="entreprises.html">Entreprises</a>
+      <a href="reglement.html">Règlement</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">📘 Clique pour consulter les règlements</h2>
+    <div class="reglement-images">
+      <img src="legal.jpeg" alt="Règlement Légal" onclick="openModal('modalLegal')" />
+      <img src="illegal.jpeg" alt="Règlement Illégal" onclick="openModal('modalIllegal')" />
+    </div>
+  </main>
+
+  <!-- MODAL LEGAL -->
+  <div id="modalLegal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalLegal')">&times;</span>
+      <h2>📘 Règlement Légal</h2>
+      <p>🟢 Pas de propos haineux, pas de triche, pas de logiciels tiers, pas de scènes inappropriées.</p>
+      <p>⛔ Racisme, sexisme, HRP en vocal, streamhack, insultes OOC... out direct.</p>
+      <p>👮 Les forces de l’ordre doivent jouer RP. Freejail, abus de pouvoir = sanction.</p>
+    </div>
+  </div>
+
+  <!-- MODAL ILLEGAL -->
+  <div id="modalIllegal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalIllegal')">&times;</span>
+      <h2>📕 Règlement Illégal</h2>
+      <p>✅ Tout acte illégal doit être logique et bien joué. Pas de troll crime.</p>
+      <p>💣 Les gunfights doivent avoir un vrai contexte RP. Les embuscades gratuites = refusées.</p>
+      <p>🕵️ Toute corruption/infiltration doit être validée par un staff RP. Pas d’impro sauvage.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SunWave</p>
+  </footer>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    // Ferme si clic en dehors
+    window.onclick = function(event) {
+      document.querySelectorAll('.modal').forEach(modal => {
+        if (event.target === modal) modal.style.display = "none";
+      });
+    };
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Règlement - SunWave</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0a0f2c;
+      color: #ffffff;
       line-height: 1.6;
     }
 
