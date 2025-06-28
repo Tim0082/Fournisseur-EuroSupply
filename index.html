@@ -168,19 +168,17 @@
 <footer>
   <div class="visitor-counter">
     👁️
-    <span id="visit-status"></span>
   </div>
 
   <script>
     const HOURS_LIMIT = 12;
     const now = Date.now();
     const lastVisit = localStorage.getItem("sw_last_visit");
-    const status = document.getElementById("visit-status");
 
     const badgeUrl = "https://hitwebcounter.com/counter/counter.php?page=21008235&style=0027&nbdigits=5&type=ip&initCount=0";
 
     if (!lastVisit || (now - parseInt(lastVisit)) > HOURS_LIMIT * 60 * 60 * 1000) {
-      // ✅ Nouvelle visite → afficher l'image et mettre à jour la date
+      // Affiche et incrémente
       localStorage.setItem("sw_last_visit", now.toString());
 
       const img = document.createElement("img");
@@ -190,26 +188,11 @@
       img.style.verticalAlign = "middle";
       img.style.filter = "brightness(1.2)";
       document.querySelector(".visitor-counter").appendChild(img);
-
-      status.textContent = " Nouvelle visite comptée ✅";
-    } else {
-      // ❌ Déjà compté → afficher l'image mais sans la recharger
-      const img = document.createElement("img");
-      img.src = badgeUrl; // facultatif : à commenter si tu veux qu’il n’apparaisse pas du tout
-      img.alt = "Compteur de visites";
-      img.style.height = "32px";
-      img.style.verticalAlign = "middle";
-      img.style.filter = "brightness(0.6)";
-      img.style.opacity = "0.6";
-      document.querySelector(".visitor-counter").appendChild(img);
-
-      status.textContent = " Visite déjà comptée 💤";
     }
   </script>
 
   <p>&copy; 2025 SunWave</p>
 </footer>
-
   
 </body>
 </html>
