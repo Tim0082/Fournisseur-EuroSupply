@@ -168,31 +168,15 @@
 <footer>
   <div class="visitor-counter">
     👁️
+    <img
+      src="https://hitwebcounter.com/counter/counter.php?page=21008235&style=0027&nbdigits=5&type=ip&initCount=0"
+      alt="Compteur de visites"
+      style="height: 32px; vertical-align: middle; filter: brightness(1.2);" />
   </div>
-
-  <script>
-    const HOURS_LIMIT = 12;
-    const now = Date.now();
-    const lastVisit = localStorage.getItem("sw_last_visit");
-
-    const badgeUrl = "https://hitwebcounter.com/counter/counter.php?page=21008235&style=0027&nbdigits=5&type=ip&initCount=0";
-
-    if (!lastVisit || (now - parseInt(lastVisit)) > HOURS_LIMIT * 60 * 60 * 1000) {
-      // Affiche et incrémente
-      localStorage.setItem("sw_last_visit", now.toString());
-
-      const img = document.createElement("img");
-      img.src = badgeUrl;
-      img.alt = "Compteur de visites";
-      img.style.height = "32px";
-      img.style.verticalAlign = "middle";
-      img.style.filter = "brightness(1.2)";
-      document.querySelector(".visitor-counter").appendChild(img);
-    }
-  </script>
 
   <p>&copy; 2025 SunWave</p>
 </footer>
+
   
 </body>
 </html>
