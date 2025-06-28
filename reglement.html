@@ -34,9 +34,19 @@
       margin: auto;
     }
 
-    h2 {
+    .section-title {
       text-align: center;
+      font-size: 1.8em;
       color: #1e90ff;
+      margin-bottom: 20px;
+    }
+
+    .reglement-section {
+      margin-bottom: 50px;
+      padding: 20px;
+      background-color: #0d1436;
+      border-radius: 10px;
+      border: 2px solid #1e90ff;
     }
 
     .accordeon .item {
@@ -77,6 +87,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Règlement</h1>
     <nav>
@@ -87,68 +98,76 @@
   </header>
 
   <main>
-    <h2>Règlement Legal</h2>
-    <div class="accordeon">
 
-      <div class="item">
-        <button class="toggle">🚨 POINTS IMPORTANTS</button>
-        <div class="content">
-          <p>🟢 Il est interdit de faire l’apologie de groupes haineux ou extrémistes.</p>
-          <p>🟢 Toute triche ou logiciel malveillant est interdit.</p>
-          <p>🟢 Avantages déloyaux via logiciels tiers interdits.</p>
-          <p>🟢 Propos haineux, harcèlement ou discrimination interdits.</p>
-          <p>🟢 Contenus sexuels explicites, surtout avec mineurs, interdits.</p>
-        </div>
-      </div>
+    <!-- SECTION LEGAL -->
+    <section class="reglement-section">
+      <h2 class="section-title">📘 Règlement Legal</h2>
 
-      <div class="item">
-        <button class="toggle">⛔ COMPORTEMENT INAPPROPRIÉ SUR LE SERVEUR</button>
-        <div class="content">
-          <p>⛔ Propos haineux (racisme, homophobie, sexisme...) = bannissement.</p>
-          <p>⛔ Termes type "p-word" ou "n-word" = totalement interdits.</p>
-          <p>⛔ RP Sexe interdit.</p>
-          <p>⛔ Images IRL choquantes ou provocantes interdites.</p>
-          <p>⛔ Publicité interdite.</p>
-          <p>⛔ Vocal extérieur à FiveM interdit.</p>
-          <p>⛔ Streamhack interdit.</p>
-          <p>⛔ HRP en RP interdit.</p>
-          <p>⛔ Port du masque/casque hors RP illégal = interdit.</p>
-          <p>⛔ Vente ou achat IRL d’items = bannissement.</p>
-          <p>⛔ Exploitation de bugs ou glitches interdite.</p>
-          <p>⛔ Usage du terme "viol" interdit.</p>
-          <p>⛔ Noms troll ou inappropriés interdits.</p>
-          <p>⛔ Respect envers les femmes = obligatoire.</p>
-          <p>⛔ Respect envers l'équipe staff = impératif.</p>
-          <p>⛔ Modificateur de voix interdit.</p>
-          <p>⛔ RP incohérent (voitures exotiques sur île, etc.) à éviter.</p>
-        </div>
-      </div>
+      <div class="accordeon">
 
-      <div class="item">
-        <button class="toggle">🎈 LES NOTIONS DU RP IMPORTANTES</button>
-        <div class="content">
-          <h2>Règlement Illégal</h2>
-
-          <div class="item">
-            <button class="toggle">📌 Point Important</button>
-            <div class="content">
-              <p>✅ Le crime doit être réfléchi, structuré, et crédible.</p>
-              <p>✅ Les braquages, prises d'otages, extorsions doivent respecter les conditions du serveur.</p>
-            </div>
+        <div class="item">
+          <button class="toggle">🚨 POINTS IMPORTANTS</button>
+          <div class="content">
+            <p>🟢 | Il est interdit de faire l’apologie ou représenter des groupes haineux, des milices armées ou des organisations extrémistes réelles.</p>
+            <p>🟢 | Toute utilisation de triche, de logiciels malveillants ou de moyens détournés pour exploiter le jeu est interdite.</p>
+            <p>🟢 | L’usage de programmes tiers permettant d’obtenir un avantage déloyal est également interdit.</p>
+            <p>🟢 | Il est interdit de tenir des propos haineux, harceler ou adopter un comportement discriminatoire.</p>
+            <p>🟢 | Il est interdit de jouer des scènes ou diffuser des contenus à caractère sexuel explicite ou impliquant des mineurs.</p>
           </div>
-
-          <div class="item">
-            <button class="toggle">📌 Point Secondaire</button>
-            <div class="content">
-              <p>✅ Pas de gunfight gratuit sans contexte RP clair.</p>
-              <p>✅ La corruption de policiers doit être encadrée et validée.</p>
-            </div>
-          </div>
-
         </div>
-      </div>
 
-    </div>
+        <div class="item">
+          <button class="toggle">⛔ COMPORTEMENT INAPPROPRIÉ SUR LE SERVEUR</button>
+          <div class="content">
+            <p>⛔・Sont interdits dans l'ensemble :</p>
+            <p>Propos Haineux : Les propos racistes, xénophobes, homophobes, ou tout autre propos haineux sont strictement interdits, portant atteinte à la communauté et à l'éthique du serveur.</p>
+            <p>Il est crucial de souligner que l'utilisation des termes dénigrants tels que le "p-word" ou le "n-word" est absolument inacceptable et ne doit en aucun cas être proférée.</p>
+            <p>RP Sexe : Le RP sexe est interdit sans exception, indépendamment des raisons ou de l'âge des joueurs, afin de maintenir un environnement de jeu approprié.</p>
+            <p>Contenu Inapproprié : Toute image IRL à caractère religieux, sexuel, homophobe, ou haineux est interdite pour créer une expérience de jeu respectueuse.</p>
+            <p>Publicités : Toutes formes de publicité sont strictement interdites sur le serveur.</p>
+            <p>Vocal Extérieur : L'utilisation de vocal extérieur à FiveM pendant le jeu, même si d'autres ne sont pas connectés, est interdite.</p>
+            <p>Streamhack : Le streamhack, être sur un stream en jeu, est interdit et peut entraîner des sanctions.</p>
+            <p>Dialecte HRP : L'utilisation de dialecte HRP pendant le RP est interdite. Restez dans le cadre de votre personnage et de l'univers RP.</p>
+            <p>Port du Masque/Casque : En ville, le port du masque/casque est interdit sauf lors d'actes illégaux. En moto, le port du casque reste autorisé.</p>
+            <p>Vente/Achat d'Argent Réel : La vente ou l'achat de biens en échange d'argent réel est strictement interdit.</p>
+            <p>L'utilisation de Bugs/Glitches : L'utilisation de bugs ou glitches dans le RP est interdite, incluant l'utilisation d'animations pour sortir de cellules ou le "use bug" pour avantager votre RP.</p>
+            <p>Viol : L'usage du terme "viol" est totalement interdit (‘jte viole, tu t’es fais violé’)</p>
+            <p>Nom / Prénom RP : Tous les noms de personnages utilisés doivent être appropriés, respectueux et cohérents. Les noms troll également ''Jean Naimare'' etc. sont interdits. Les noms qui font référence à une célébrité fictive ou réelle sont interdits. Tout nom comportant une référence à l'histoire de terrorisme, à l'homophobie, ou au racisme est passible d'un ban permanent.</p>
+            <p>Manque de respect à l'égard des femmes : Les commentaires désobligeants envers les femmes, particulièrement lorsqu'ils visent à rabaisser la personne en raison de son genre, sont inappropriés. Les insultes doivent être intégrées dans le cadre du RP et motivées par la scène, pas par le genre.</p>
+            <p>Arrogance/manque de respect en interadmin : Le manque de respect ou l'arrogance envers le personnel, que ce soit en report, en ticket, en interadmin ou en BDA, n'a pas lieu d'être.</p>
+            <p>Modificateur de voix : L'utilisation d'un modificateur de voix est totalement interdite.</p>
+            <p>La conduite RP : Adoptez une conduite roleplay cohérente. De même sur Cayo (SUV, etc... Super sportive incohérente).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION ILLEGAL -->
+    <section class="reglement-section">
+      <h2 class="section-title">📕 Règlement Illégal</h2>
+
+      <div class="accordeon">
+
+        <div class="item">
+          <button class="toggle">📌 Point Important</button>
+          <div class="content">
+            <p>✅ Le crime doit être réfléchi, structuré, et crédible.</p>
+            <p>✅ Les braquages, prises d'otages, extorsions doivent respecter les conditions du serveur.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="toggle">📌 Point Secondaire</button>
+          <div class="content">
+            <p>✅ Pas de gunfight gratuit sans contexte RP clair.</p>
+            <p>✅ La corruption de policiers doit être encadrée et validée.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer>
@@ -161,14 +180,11 @@
       toggle.addEventListener('click', () => {
         toggle.classList.toggle('active');
         const content = toggle.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
+        content.style.display = (content.style.display === "block") ? "none" : "block";
       });
     });
   </script>
+
 </body>
 </html>
 
