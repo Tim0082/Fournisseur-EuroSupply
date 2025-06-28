@@ -74,3 +74,11 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
+.legal-title {
+  color: green;
+}
+
+.illegal-title {
+  color: red;
+}
