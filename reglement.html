@@ -87,50 +87,64 @@
   </header>
 
   <main>
-    <h2 class="legal-title">Règlement Legal</h2>
-
+    <h2>Règlement Legal</h2>
     <div class="accordeon">
 
       <div class="item">
         <button class="toggle">🚨 POINTS IMPORTANTS</button>
         <div class="content">
-          <p>🟢 Il est interdit de faire l’apologie ou représenter des groupes haineux.</p>
-          <p>🟢 Toute utilisation de triche ou de logiciels malveillants est interdite.</p>
-          <p>🟢 L’usage de programmes tiers pour obtenir un avantage est interdit.</p>
-          <p>🟢 Les propos haineux, harcèlement ou discriminations sont interdits.</p>
-          <p>🟢 Les contenus sexuels explicites ou impliquant des mineurs sont interdits.</p>
+          <p>🟢 Il est interdit de faire l’apologie de groupes haineux ou extrémistes.</p>
+          <p>🟢 Toute triche ou logiciel malveillant est interdit.</p>
+          <p>🟢 Avantages déloyaux via logiciels tiers interdits.</p>
+          <p>🟢 Propos haineux, harcèlement ou discrimination interdits.</p>
+          <p>🟢 Contenus sexuels explicites, surtout avec mineurs, interdits.</p>
         </div>
       </div>
 
       <div class="item">
         <button class="toggle">⛔ COMPORTEMENT INAPPROPRIÉ SUR LE SERVEUR</button>
         <div class="content">
-          <p>⛔ Propos haineux : racisme, homophobie, sexisme interdits.</p>
-          <p>⛔ RP sexe : strictement interdit.</p>
-          <p>⛔ Contenu inapproprié IRL ou religieux interdit.</p>
+          <p>⛔ Propos haineux (racisme, homophobie, sexisme...) = bannissement.</p>
+          <p>⛔ Termes type "p-word" ou "n-word" = totalement interdits.</p>
+          <p>⛔ RP Sexe interdit.</p>
+          <p>⛔ Images IRL choquantes ou provocantes interdites.</p>
           <p>⛔ Publicité interdite.</p>
-          <p>⛔ Utilisation de vocal extérieur à FiveM interdite.</p>
+          <p>⛔ Vocal extérieur à FiveM interdit.</p>
           <p>⛔ Streamhack interdit.</p>
           <p>⛔ HRP en RP interdit.</p>
-          <p>⛔ Port du masque/casque en ville interdit sauf actes illégaux.</p>
-          <p>⛔ Vente/achat d'argent réel interdit.</p>
-          <p>⛔ Exploits ou bugs interdits (use bug, animation prison, etc.).</p>
-          <p>⛔ Terme "viol" totalement interdit.</p>
-          <p>⛔ Noms de personnages trolls ou offensants interdits.</p>
-          <p>⛔ Manque de respect envers les femmes = sanction.</p>
-          <p>⛔ Manque de respect en interadmin interdit.</p>
+          <p>⛔ Port du masque/casque hors RP illégal = interdit.</p>
+          <p>⛔ Vente ou achat IRL d’items = bannissement.</p>
+          <p>⛔ Exploitation de bugs ou glitches interdite.</p>
+          <p>⛔ Usage du terme "viol" interdit.</p>
+          <p>⛔ Noms troll ou inappropriés interdits.</p>
+          <p>⛔ Respect envers les femmes = obligatoire.</p>
+          <p>⛔ Respect envers l'équipe staff = impératif.</p>
           <p>⛔ Modificateur de voix interdit.</p>
-          <p>⛔ RP incohérent (SUV sur Cayo, supercar RP illogique...).</p>
+          <p>⛔ RP incohérent (voitures exotiques sur île, etc.) à éviter.</p>
         </div>
       </div>
 
       <div class="item">
         <button class="toggle">🎈 LES NOTIONS DU RP IMPORTANTES</button>
         <div class="content">
-          <p>✅ Restez dans votre rôle en toute circonstance.</p>
-          <p>✅ Vos décisions doivent être cohérentes avec le contexte RP.</p>
-          <p>✅ Les scènes doivent rester logiques et crédibles.</p>
-          <p>✅ Pas de super-héros ou actions irréalistes.</p>
+          <h2>Règlement Illégal</h2>
+
+          <div class="item">
+            <button class="toggle">📌 Point Important</button>
+            <div class="content">
+              <p>✅ Le crime doit être réfléchi, structuré, et crédible.</p>
+              <p>✅ Les braquages, prises d'otages, extorsions doivent respecter les conditions du serveur.</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <button class="toggle">📌 Point Secondaire</button>
+            <div class="content">
+              <p>✅ Pas de gunfight gratuit sans contexte RP clair.</p>
+              <p>✅ La corruption de policiers doit être encadrée et validée.</p>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -147,9 +161,14 @@
       toggle.addEventListener('click', () => {
         toggle.classList.toggle('active');
         const content = toggle.nextElementSibling;
-        content.style.display = (content.style.display === "block") ? "none" : "block";
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
       });
     });
   </script>
 </body>
 </html>
+
