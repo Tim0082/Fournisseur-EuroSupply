@@ -1,25 +1,25 @@
 <style>
   header {
     background-color: #061943;
-    padding: 20px 40px 20px 40px;
+    padding: 10px 40px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 5;
   }
 
-  .logo-floating {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 140px;
+  .logo-zone {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-zone img {
+    width: 100px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    z-index: 10;
-    pointer-events: none; /* le logo ne bloque pas les clics */
   }
 
   nav {
@@ -28,7 +28,8 @@
     align-items: center;
   }
 
-  nav a, .dropbtn {
+  nav a,
+  .dropbtn {
     text-decoration: none;
     padding: 10px 18px;
     background-color: #1e90ff;
@@ -40,7 +41,8 @@
     cursor: pointer;
   }
 
-  nav a:hover, .dropbtn:hover {
+  nav a:hover,
+  .dropbtn:hover {
     background-color: #00bfff;
     transform: translateY(-2px);
   }
@@ -58,6 +60,7 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
     border-radius: 6px;
     z-index: 1000;
+    overflow: hidden;
   }
 
   .dropdown-content a {
@@ -79,7 +82,9 @@
 </style>
 
 <header>
-  <img src="logo.png" alt="Logo SunWave" class="logo-floating" />
+  <div class="logo-zone">
+    <img src="logo.png" alt="Logo SunWave" />
+  </div>
 
   <nav>
     <a href="index.html">Accueil</a>
@@ -96,4 +101,3 @@
     </div>
   </nav>
 </header>
-
