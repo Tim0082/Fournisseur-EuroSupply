@@ -14,7 +14,7 @@
 
     header {
       background-color: #061943;
-      padding: 20px;
+      padding: 20px 20px 20px 160px; /* marge pour le logo à gauche */
       display: flex;
       justify-content: flex-end;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -41,10 +41,9 @@
 
     .logo-floating {
       position: absolute;
-      top: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120px;
+      top: 20px;
+      left: 20px;
+      width: 100px;
       height: auto;
       z-index: 10;
       border-radius: 12px;
@@ -71,7 +70,7 @@
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
       margin-bottom: 60px;
-      margin-top: 80px; /* pour compenser le logo qui dépasse */
+      margin-top: 40px; /* légèrement réduit vu que le logo est à gauche */
     }
 
     .intro-section h1 {
@@ -120,6 +119,9 @@
 </head>
 <body>
 
+  <!-- Logo flottant à gauche -->
+  <img src="logo.jpeg" alt="Logo SunWave" class="logo-floating" />
+
   <header>
     <nav>
       <a href="index.html">Accueil</a>
@@ -127,9 +129,6 @@
       <a href="reglement.html">Règlement</a>
     </nav>
   </header>
-
-  <!-- Logo à cheval -->
-  <img src="logo.jpeg" alt="Logo SunWave" class="logo-floating" />
 
   <main>
     <section class="intro-section">
