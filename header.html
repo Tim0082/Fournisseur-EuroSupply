@@ -1,5 +1,84 @@
+<style>
+  .logo-floating {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  header {
+    background-color: #061943;
+    padding: 20px 20px 20px 260px;
+    display: flex;
+    justify-content: flex-end;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 5;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  nav a, .dropbtn {
+    text-decoration: none;
+    padding: 10px 18px;
+    background-color: #1e90ff;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav a:hover, .dropbtn:hover {
+    background-color: #00bfff;
+    transform: translateY(-2px);
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #061943;
+    min-width: 180px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    z-index: 1000;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #1e90ff;
+    border-bottom: 1px solid #0f4c81;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #00bfff;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
+<img src="logo.png" alt="Logo SunWave" class="logo-floating" />
+
 <header>
-  <img src="logo.png" alt="Logo SunWave" class="logo-floating" />
   <nav>
     <a href="index.html">Accueil</a>
     <a href="entreprises.html">Entreprises</a>
@@ -15,51 +94,3 @@
     </div>
   </nav>
 </header>
-
-<style>
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropbtn {
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .dropbtn:hover {
-    background-color: #00bfff;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #061943;
-    min-width: 160px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-    z-index: 1000;
-  }
-
-  .dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #1e90ff;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-</style>
