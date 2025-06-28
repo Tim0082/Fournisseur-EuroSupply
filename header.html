@@ -1,3 +1,87 @@
+<style>
+  header {
+    background-color: #061943;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  nav a, .dropbtn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: #1e90ff;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav a:hover, .dropbtn:hover {
+    background-color: #00bfff;
+  }
+
+  nav a:visited {
+    color: #ffffff;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #061943;
+    min-width: 180px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    z-index: 1000;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #1e90ff;
+    border-bottom: 1px solid #0f4c81;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #00bfff;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .floating-logo {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    pointer-events: none;
+  }
+</style>
+
 <header>
   <nav>
     <a href="index.html">Accueil</a>
@@ -16,4 +100,3 @@
 
   <img src="logo.png" alt="Logo SunWave" class="floating-logo" />
 </header>
-
