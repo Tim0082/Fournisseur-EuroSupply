@@ -1,25 +1,35 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #0a0f2c;
   color: #ffffff;
+  line-height: 1.6;
 }
 
 header {
   background-color: #061943;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.5em;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px #000;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 12px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #1e90ff;
 }
 
 main {
@@ -30,9 +40,86 @@ main {
 
 h2 {
   text-align: center;
+  font-size: 1.8em;
   color: #1e90ff;
+  margin-bottom: 20px;
 }
 
+.section-title {
+  color: #1e90ff;
+  font-size: 2em;
+  border-bottom: 2px solid #1e90ff;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.reglement-section {
+  background-color: #0b1430;
+  border: 2px solid #1e90ff;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.accordeon .item {
+  border: 1px solid #1e90ff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordeon .item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px #1e90ff44;
+}
+
+.toggle {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #061943;
+  color: white;
+  border: none;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle:hover,
+.toggle:focus {
+  background-color: #1e90ff;
+  outline: none;
+}
+
+.toggle.active {
+  background-color: #1e90ff;
+}
+
+.content {
+  display: none;
+  padding: 20px;
+  background-color: #0d1436;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+  background-color: #061943;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #ffffffaa;
+}
+
+/* Grille entreprises */
 .entreprises-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -45,7 +132,13 @@ h2 {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(30, 144, 255, 0.3);
 }
 
 .card img {
@@ -66,19 +159,23 @@ h2 {
   color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-footer {
-  background-color: #061943;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+.card a:hover {
+  background-color: #3faeff;
 }
 
+/* Titres spécifiques */
 .legal-title {
-  color: green;
+  color: #2eff8f;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #003;
 }
 
 .illegal-title {
-  color: red;
+  color: #ff4e4e;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #300;
 }
