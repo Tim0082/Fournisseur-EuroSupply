@@ -4,24 +4,149 @@
   <meta charset="UTF-8" />
   <title>Accueil - SunWave</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0f2c;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #061943;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #1e90ff;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.8em;
+      color: #1e90ff;
+      margin-bottom: 20px;
+    }
+
+    /* Intro spéciale SunWave */
+    .intro-section {
+      background-color: #061943;
+      padding: 60px 30px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
+      margin-bottom: 60px;
+    }
+
+    .intro-section h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #1e90ff;
+    }
+
+    .intro-section .highlight {
+      color: #ffffff;
+      background: linear-gradient(90deg, #1e90ff, #00c3ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .intro-section p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #ffffffcc;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #1e90ff;
+      color: #ffffff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #00bfff;
+    }
+
+    footer {
+      background-color: #061943;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #ffffffaa;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Bienvenue sur SunWave</h1>
     <nav>
       <a href="index.html">Accueil</a> |
-      <a href="entreprises.html">Entreprises</a>
+      <a href="entreprises.html">Entreprises</a> |
       <a href="reglement.html">Règlement</a>
-</nav>
+    </nav>
   </header>
 
   <main>
+
+    <section class="intro-section">
+      <h1>🌊 Bienvenue sur <span class="highlight">SunWave RP</span></h1>
+      <p>
+        SunWave, c’est le nouveau souffle du GTA RP français.<br>
+        Un serveur flambant neuf, ouvert hier, et déjà <strong>+500 joueurs connectés</strong> en continu ! 🔥
+      </p>
+      <p>
+        Ici, plonge dans une expérience <strong>RP 100% réaliste</strong> avec une économie <strong>semi-réaliste</strong> pensée pour durer.
+        Que tu sois flic, entrepreneur, voyou ou simple citoyen, chaque choix façonne ton histoire.
+      </p>
+      <p>
+        Rejoins une communauté active, ambitieuse et encadrée par une équipe à l’écoute.<br>
+        <strong>Ton aventure commence maintenant.</strong>
+      </p>
+      <a href="connexion.html" class="cta-button">🚀 Rejoindre l’aventure</a>
+    </section>
+
     <h2>Bienvenue sur le site SunWave</h2>
-    <p>Page d'accueil de ton site !</p>
+    <p style="text-align:center;">Page d'accueil de ton site !</p>
+
   </main>
 
   <footer>
     <p>&copy; 2025 SunWave</p>
   </footer>
+
 </body>
 </html>
