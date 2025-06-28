@@ -111,22 +111,16 @@
       font-size: 0.9em;
       color: #ffffffaa;
       position: relative;
-      text-align: center; /* ✅ centré */
+      text-align: center;
     }
-    
   </style>
 </head>
 <body>
 
   <img src="logo.png" alt="Logo SunWave" class="logo-floating" />
 
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="entreprises.html">Entreprises</a>
-      <a href="reglement.html">Règlement</a>
-    </nav>
-  </header>
+  <!-- Header inclus dynamiquement -->
+  <div id="include-header"></div>
 
   <main>
     <section class="intro-section">
@@ -147,9 +141,24 @@
     </section>
   </main>
 
-<footer>
-  <p>&copy; 2025 SunWave</p>
-</footer>
-  
+  <!-- Footer inclus dynamiquement -->
+  <div id="include-footer"></div>
+
+  <script>
+    // Header
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-header").innerHTML = data;
+      });
+
+    // Footer
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-footer").innerHTML = data;
+      });
+  </script>
+
 </body>
 </html>
