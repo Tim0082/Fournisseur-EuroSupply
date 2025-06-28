@@ -1,3 +1,4 @@
+/* ==== BASE ==== */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -125,32 +126,28 @@ footer {
   margin-bottom: 30px;
 }
 
-/* ==== REGLEMENT ==== */
-.reglement-section {
-  background-color: #0b1430;
-  border: 2px solid #1e90ff;
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 50px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+/* ==== ACCORDÉON ==== */
+.accordion {
+  margin-top: 60px;
 }
 
-.accordeon .item {
+.accordion-item {
   border: 1px solid #1e90ff;
   border-radius: 8px;
   margin-bottom: 20px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #061943;
 }
 
-.accordeon .item:hover {
+.accordion-item:hover {
   transform: scale(1.01);
   box-shadow: 0 0 10px #1e90ff44;
 }
 
-.toggle {
+.accordion-header {
   width: 100%;
-  padding: 15px 20px;
+  padding: 15px 24px;
   background-color: #061943;
   color: white;
   border: none;
@@ -161,26 +158,22 @@ footer {
   transition: background-color 0.3s ease;
 }
 
-.toggle:hover,
-.toggle:focus {
+.accordion-header:hover,
+.accordion-header:focus {
   background-color: #1e90ff;
   outline: none;
 }
 
-.toggle.active {
+.accordion-header.active {
   background-color: #1e90ff;
 }
 
-.content {
-  display: none;
-  padding: 20px;
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
   background-color: #0d1436;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  padding: 0 24px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
 }
 
 /* ==== ENTREPRISES ==== */
