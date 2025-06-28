@@ -16,7 +16,7 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 200px; /* ✅ 2x plus grand */
+      width: 200px;
       height: auto;
       z-index: 10;
       border-radius: 12px;
@@ -25,7 +25,7 @@
 
     header {
       background-color: #061943;
-      padding: 20px 20px 20px 260px; /* ✅ marge + large à gauche */
+      padding: 20px 20px 20px 260px;
       display: flex;
       justify-content: flex-end;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -132,24 +132,16 @@
 </head>
 <body>
 
-  <!-- ✅ Logo flottant plus gros -->
   <img src="logo.png" alt="Logo SunWave" class="logo-floating" />
 
-  <!-- ✅ Nav à droite avec boutons -->
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="entreprises.html">Entreprises</a>
-      <a href="reglement.html">Règlement</a>
-    </nav>
-  </header>
+  <!-- Header dynamique -->
+  <div id="include-header"></div>
 
   <main>
     <h2 class="section-title">Nos Entreprises</h2>
 
     <div class="entreprises-grid">
 
-      <!-- SASP -->
       <div class="card">
         <img src="https://image.noelshack.com/fichiers/2025/26/6/1751065997-oip.png" alt="SASP" />
         <h3>SASP</h3>
@@ -157,7 +149,6 @@
         <a href="https://discord.gg/sunwave" target="_blank">Voir plus</a>
       </div>
 
-      <!-- Gouvernement -->
       <div class="card">
         <img src="https://image.noelshack.com/fichiers/2025/26/6/1751070675-oip.jpg" alt="Gouvernement" />
         <h3>Gouvernement</h3>
@@ -165,7 +156,6 @@
         <a href="https://discord.gg/sunwave" target="_blank">Voir plus</a>
       </div>
 
-      <!-- SAMC -->
       <div class="card">
         <img src="https://image.noelshack.com/fichiers/2025/26/6/1751072063-oip-1.jpg" alt="SAMC" />
         <h3>SAMC</h3>
@@ -173,7 +163,6 @@
         <a href="https://discord.gg/sunwave" target="_blank">Voir plus</a>
       </div>
 
-      <!-- Malibu -->
       <div class="card">
         <img src="https://image.noelshack.com/fichiers/2025/26/6/1751071605-oip-2.jpg" alt="Malibu" />
         <h3>Malibu</h3>
@@ -181,7 +170,6 @@
         <a href="https://discord.gg/sunwave" target="_blank">Voir plus</a>
       </div>
 
-      <!-- Unicorn -->
       <div class="card">
         <img src="https://image.noelshack.com/fichiers/2025/26/6/1751071773-unicorn.png" alt="Unicorn" />
         <h3>Unicorn</h3>
@@ -189,7 +177,6 @@
         <a href="https://discord.gg/sunwave" target="_blank">Voir plus</a>
       </div>
 
-      <!-- Pacific Bluff -->
       <div class="card">
         <img src="https://image.noelshack.com/fichiers/2025/26/6/1751071873-pacific-bluff.png" alt="Pacific Bluff" />
         <h3>Pacific Bluff</h3>
@@ -200,9 +187,24 @@
     </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 SunWave. Tous droits réservés.</p>
-  </footer>
+  <!-- Footer dynamique -->
+  <div id="include-footer"></div>
+
+  <script>
+    // Header
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-header").innerHTML = data;
+      });
+
+    // Footer
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-footer").innerHTML = data;
+      });
+  </script>
 
 </body>
 </html>
