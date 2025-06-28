@@ -4,60 +4,142 @@
   <meta charset="UTF-8" />
   <title>Règlement - SunWave</title>
   <style>
-    .content {
-      display: none;
-      margin-top: 10px;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0f2c;
+      color: #ffffff;
     }
+
+    header {
+      background-color: #061943;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e90ff;
+    }
+
+    .accordeon .item {
+      margin-bottom: 20px;
+      border: 1px solid #1e90ff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
     .toggle {
       width: 100%;
-      padding: 10px;
+      padding: 15px;
       background-color: #061943;
       color: white;
       border: none;
       text-align: left;
+      font-size: 1em;
       font-weight: bold;
       cursor: pointer;
     }
+
     .toggle.active {
       background-color: #1e90ff;
     }
-    .item {
-      margin-bottom: 20px;
+
+    .content {
+      display: none;
+      padding: 15px;
+      background-color: #0d1436;
     }
-    body {
-      background-color: #0a0f2c;
-      color: white;
-      font-family: Arial, sans-serif;
+
+    footer {
+      text-align: center;
       padding: 20px;
+      background-color: #061943;
+      color: white;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Règlement</h1>
+    <nav>
+      <a href="index.html">Accueil</a> |
+      <a href="entreprises.html">Entreprises</a> |
+      <a href="reglement.html">Règlement</a>
+    </nav>
+  </header>
+
   <main>
-    <h2>Règlement Legal</h2>
+    <h2 class="legal-title">Règlement Legal</h2>
+
     <div class="accordeon">
+
       <div class="item">
         <button class="toggle">🚨 POINTS IMPORTANTS</button>
         <div class="content">
           <p>🟢 Il est interdit de faire l’apologie ou représenter des groupes haineux.</p>
           <p>🟢 Toute utilisation de triche ou de logiciels malveillants est interdite.</p>
+          <p>🟢 L’usage de programmes tiers pour obtenir un avantage est interdit.</p>
+          <p>🟢 Les propos haineux, harcèlement ou discriminations sont interdits.</p>
+          <p>🟢 Les contenus sexuels explicites ou impliquant des mineurs sont interdits.</p>
         </div>
       </div>
+
       <div class="item">
-        <button class="toggle">⛔ COMPORTEMENT INAPPROPRIÉ</button>
+        <button class="toggle">⛔ COMPORTEMENT INAPPROPRIÉ SUR LE SERVEUR</button>
         <div class="content">
-          <p>⛔ Propos haineux, harcèlement, ou comportements toxiques sont interdits.</p>
-          <p>⛔ Publicité, streamhack, et utilisation de bugs sont interdits.</p>
+          <p>⛔ Propos haineux : racisme, homophobie, sexisme interdits.</p>
+          <p>⛔ RP sexe : strictement interdit.</p>
+          <p>⛔ Contenu inapproprié IRL ou religieux interdit.</p>
+          <p>⛔ Publicité interdite.</p>
+          <p>⛔ Utilisation de vocal extérieur à FiveM interdite.</p>
+          <p>⛔ Streamhack interdit.</p>
+          <p>⛔ HRP en RP interdit.</p>
+          <p>⛔ Port du masque/casque en ville interdit sauf actes illégaux.</p>
+          <p>⛔ Vente/achat d'argent réel interdit.</p>
+          <p>⛔ Exploits ou bugs interdits (use bug, animation prison, etc.).</p>
+          <p>⛔ Terme "viol" totalement interdit.</p>
+          <p>⛔ Noms de personnages trolls ou offensants interdits.</p>
+          <p>⛔ Manque de respect envers les femmes = sanction.</p>
+          <p>⛔ Manque de respect en interadmin interdit.</p>
+          <p>⛔ Modificateur de voix interdit.</p>
+          <p>⛔ RP incohérent (SUV sur Cayo, supercar RP illogique...).</p>
         </div>
       </div>
+
       <div class="item">
         <button class="toggle">🎈 LES NOTIONS DU RP IMPORTANTES</button>
         <div class="content">
-          <p>🎈 Respect du cadre RP, noms sérieux, conduite cohérente.</p>
+          <p>✅ Restez dans votre rôle en toute circonstance.</p>
+          <p>✅ Vos décisions doivent être cohérentes avec le contexte RP.</p>
+          <p>✅ Les scènes doivent rester logiques et crédibles.</p>
+          <p>✅ Pas de super-héros ou actions irréalistes.</p>
         </div>
       </div>
+
     </div>
   </main>
+
+  <footer>
+    <p>&copy; 2025 SunWave</p>
+  </footer>
 
   <script>
     const toggles = document.querySelectorAll('.toggle');
@@ -65,11 +147,7 @@
       toggle.addEventListener('click', () => {
         toggle.classList.toggle('active');
         const content = toggle.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
+        content.style.display = (content.style.display === "block") ? "none" : "block";
       });
     });
   </script>
