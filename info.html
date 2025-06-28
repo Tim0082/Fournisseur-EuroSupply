@@ -8,13 +8,10 @@
 </head>
 <body>
 
-  <!-- Logo si besoin -->
-  <!-- <img src="logo.png" alt="Logo SunWave" class="logo-floating" /> -->
-
-  <!-- Header dynamique -->
+  <!-- Header dynamique avec logo intégré dans header.html -->
   <div id="include-header"></div>
 
-  <!-- Accordéon -->
+  <!-- Corps principal avec accordéon -->
   <main>
     <div class="accordion">
       <div class="accordion-item">
@@ -23,12 +20,14 @@
           <p>Texte sur la mort RP...</p>
         </div>
       </div>
+
       <div class="accordion-item">
         <button class="accordion-header">🏡 IMMOBILIERS</button>
         <div class="accordion-content">
           <p>Texte sur les immobiliers...</p>
         </div>
       </div>
+
       <div class="accordion-item">
         <button class="accordion-header">🎥 STREAMEUR</button>
         <div class="accordion-content">
@@ -40,18 +39,21 @@
           </ul>
         </div>
       </div>
+
       <div class="accordion-item">
         <button class="accordion-header">✈️ AÉRIEN</button>
         <div class="accordion-content">
           <p>Texte sur l’aérien...</p>
         </div>
       </div>
+
       <div class="accordion-item">
         <button class="accordion-header">📄 TICKET</button>
         <div class="accordion-content">
           <p>Texte pour le ticket...</p>
         </div>
       </div>
+
       <div class="accordion-item">
         <button class="accordion-header">⚠️ FAQ</button>
         <div class="accordion-content">
@@ -66,19 +68,23 @@
 
   <!-- Scripts -->
   <script>
+    // Importation dynamique du header
     fetch("header.html")
       .then(res => res.text())
       .then(html => {
         document.getElementById("include-header").innerHTML = html;
       });
 
+    // Importation dynamique du footer
     fetch("footer.html")
       .then(res => res.text())
       .then(html => {
         document.getElementById("include-footer").innerHTML = html;
       });
   </script>
-  <script src="script.js"></script>
 
+  <!-- Script accordéon -->
+  <script src="script.js"></script>
 </body>
 </html>
+
