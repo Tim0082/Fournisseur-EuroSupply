@@ -165,33 +165,40 @@
     </section>
   </main>
 
-  <footer>
-    <div class="visitor-counter">
-  👁️
-  <!-- Le compteur sera injecté ici par JavaScript -->
-</div>
+ <footer>
+  <div class="visitor-counter">
+    👁️
+    <img id="visit-badge" src="" alt="compteur de visites" />
+    <span id="visit-status"></span>
+  </div>
 
-<script>
-  const HOURS_LIMIT = 12;
-  const lastVisit = localStorage.getItem("sw_last_visit");
-  const now = Date.now();
+  <script>
+    const HOURS_LIMIT = 12;
+    const now = Date.now();
+    const lastVisit = localStorage.getItem("sw_last_visit");
+    const badge = document.getElementById("visit-badge");
+    const status = document.getElementById("visit-status");
 
-  if (!lastVisit || (now - parseInt(lastVisit)) > HOURS_LIMIT * 60 * 60 * 1000) {
-    localStorage.setItem("sw_last_visit", now.toString());
+    const badgeUrl = "https://visitor-badge.laobi.icu/badge?page_id=sunwave.index";
 
-    const img = document.createElement("img");
-    img.src = "https://visitor-badge.laobi.icu/badge?page_id=sunwave.index";
-    img.alt = "visiteur";
-    img.style.height = "32px";
-    img.style.verticalAlign = "middle";
-    img.style.filter = "brightness(1.2)";
-    document.querySelector(".visitor-counter").appendChild(img);
-  } else {
-    console.log("Pas de comptage, déjà visité récemment");
-  }
-</script>
-    <p>&copy; 2025 SunWave</p>
-  </footer>
+    // Toujours afficher le badge
+    badge.src = badgeUrl;
+    badge.style.height = "32px";
+    badge.style.verticalAlign = "middle";
+    badge.style.filter = "brightness(1.2)";
+
+    if (!lastVisit || (now - parseInt(lastVisit)) > HOURS_LIMIT * 60 * 60 * 1000) {
+      // Visite à comptabiliser
+      localStorage.setItem("sw_last_visit", now.toString());
+      status.textContent = " (nouvelle visite comptée ✅)";
+    } else {
+      // Visite déjà comptée
+      status.textContent = " (visite déjà comptée 💤)";
+    }
+  </script>
+
+  <p>&copy; 2025 SunWave</p>
+</footer>
 
 </body>
 </html>
