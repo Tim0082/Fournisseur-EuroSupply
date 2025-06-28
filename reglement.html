@@ -128,13 +128,8 @@
 
   <img src="logo.png" alt="Logo SunWave" class="logo-floating" />
 
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="entreprises.html">Entreprises</a>
-      <a href="reglement.html">Règlement</a>
-    </nav>
-  </header>
+  <!-- Header dynamique -->
+  <div id="include-header"></div>
 
   <main>
     <h2 class="section-title">📘 Clique pour consulter les règlements</h2>
@@ -166,11 +161,11 @@
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 SunWave</p>
-  </footer>
+  <!-- Footer dynamique -->
+  <div id="include-footer"></div>
 
   <script>
+    // Modals
     function openModal(id) {
       document.getElementById(id).style.display = "block";
     }
@@ -179,12 +174,24 @@
       document.getElementById(id).style.display = "none";
     }
 
-    // Ferme si clic en dehors
     window.onclick = function(event) {
       document.querySelectorAll('.modal').forEach(modal => {
         if (event.target === modal) modal.style.display = "none";
       });
     };
+
+    // Header/footer dynamiques
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-header").innerHTML = data;
+      });
+
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("include-footer").innerHTML = data;
+      });
   </script>
 
 </body>
