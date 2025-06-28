@@ -165,10 +165,9 @@
     </section>
   </main>
 
- <footer>
+<footer>
   <div class="visitor-counter">
     👁️
-    <img id="visit-badge" src="" alt="compteur de visites" />
     <span id="visit-status"></span>
   </div>
 
@@ -176,29 +175,31 @@
     const HOURS_LIMIT = 12;
     const now = Date.now();
     const lastVisit = localStorage.getItem("sw_last_visit");
-    const badge = document.getElementById("visit-badge");
     const status = document.getElementById("visit-status");
 
-    const badgeUrl = "https://visitor-badge.laobi.icu/badge?page_id=sunwave.index";
-
-    // Toujours afficher le badge
-    badge.src = badgeUrl;
-    badge.style.height = "32px";
-    badge.style.verticalAlign = "middle";
-    badge.style.filter = "brightness(1.2)";
+    const badgeUrl = "https://hitwebcounter.com/counter/counter.php?page=8938894&style=0038&nbdigits=5&type=page&initCount=0";
 
     if (!lastVisit || (now - parseInt(lastVisit)) > HOURS_LIMIT * 60 * 60 * 1000) {
-      // Visite à comptabiliser
+      // ✅ Nouvelle visite → on affiche le compteur et on incrémente
       localStorage.setItem("sw_last_visit", now.toString());
-      status.textContent = " (nouvelle visite comptée ✅)";
+
+      const img = document.createElement("img");
+      img.src = badgeUrl;
+      img.alt = "Compteur de visites";
+      img.style.height = "32px";
+      img.style.verticalAlign = "middle";
+      img.style.filter = "brightness(1.2)";
+      document.querySelector(".visitor-counter").appendChild(img);
+
+      status.textContent = " Nouvelle visite comptée ✅";
     } else {
-      // Visite déjà comptée
-      status.textContent = " (visite déjà comptée 💤)";
+      // ❌ Déjà compté → n'affiche pas de nouvelle image
+      status.textContent = " Visite déjà comptée 💤";
     }
   </script>
 
   <p>&copy; 2025 SunWave</p>
 </footer>
-
+  
 </body>
 </html>
