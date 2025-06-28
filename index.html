@@ -167,9 +167,29 @@
 
   <footer>
     <div class="visitor-counter">
-      👁️
-      <img src="https://visitor-badge.laobi.icu/badge?page_id=sunwave.index" alt="visiteur" />
-    </div>
+  👁️
+  <!-- Le compteur sera injecté ici par JavaScript -->
+</div>
+
+<script>
+  const HOURS_LIMIT = 12;
+  const lastVisit = localStorage.getItem("sw_last_visit");
+  const now = Date.now();
+
+  if (!lastVisit || (now - parseInt(lastVisit)) > HOURS_LIMIT * 60 * 60 * 1000) {
+    localStorage.setItem("sw_last_visit", now.toString());
+
+    const img = document.createElement("img");
+    img.src = "https://visitor-badge.laobi.icu/badge?page_id=sunwave.index";
+    img.alt = "visiteur";
+    img.style.height = "32px";
+    img.style.verticalAlign = "middle";
+    img.style.filter = "brightness(1.2)";
+    document.querySelector(".visitor-counter").appendChild(img);
+  } else {
+    console.log("Pas de comptage, déjà visité récemment");
+  }
+</script>
     <p>&copy; 2025 SunWave</p>
   </footer>
 
