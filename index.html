@@ -113,25 +113,7 @@
       position: relative;
       text-align: center; /* ✅ centré */
     }
-
-    .visitor-counter {
-      position: absolute;
-      right: 20px;
-      top: 10px;
-      background-color: #1e1e2f;
-      padding: 12px 26px;
-      border-radius: 10px;
-      font-size: 1.6em; /* ✅ 2x plus gros */
-      color: #ffffffcc;
-      font-weight: bold;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    }
-
-    .visitor-counter img {
-      height: 32px; /* ✅ plus gros badge */
-      vertical-align: middle;
-      filter: brightness(1.2);
-    }
+    
   </style>
 </head>
 <body>
@@ -166,49 +148,8 @@
   </main>
 
 <footer>
-  <div class="visitor-counter">
-    👁️ <span id="visit-count">...</span>
-  </div>
-
-  <script>
-    const HOURS_LIMIT = 12;
-    const now = Date.now();
-    const lastVisit = localStorage.getItem("sw_last_visit");
-
-    const namespace = "sunwave"; // tu peux changer
-    const key = "visites";
-    const countElement = document.getElementById("visit-count");
-
-    // Fonction pour récupérer la valeur sans l'incrémenter
-    function getCount() {
-      fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
-        .then(res => res.json())
-        .then(data => {
-          countElement.textContent = data.value;
-        });
-    }
-
-    // Fonction pour incrémenter UNE FOIS toutes les 12h
-    function incrementCount() {
-      fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-        .then(res => res.json())
-        .then(data => {
-          countElement.textContent = data.value;
-        });
-    }
-
-    if (!lastVisit || (now - parseInt(lastVisit)) > HOURS_LIMIT * 60 * 60 * 1000) {
-      localStorage.setItem("sw_last_visit", now.toString());
-      incrementCount(); // On incrémente
-    } else {
-      getCount(); // On lit seulement
-    }
-  </script>
-
   <p>&copy; 2025 SunWave</p>
 </footer>
-
-
   
 </body>
 </html>
