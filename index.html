@@ -16,7 +16,7 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 200px; /* ✅ plus grand */
+      width: 200px;
       height: auto;
       z-index: 10;
       border-radius: 12px;
@@ -25,7 +25,7 @@
 
     header {
       background-color: #061943;
-      padding: 20px 20px 20px 260px; /* ✅ marge élargie à gauche */
+      padding: 20px 20px 20px 260px;
       display: flex;
       justify-content: flex-end;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -116,10 +116,8 @@
 </head>
 <body>
 
-  <!-- ✅ Logo flottant à gauche -->
   <img src="logo.png" alt="Logo SunWave" class="logo-floating" />
 
-  <!-- ✅ Navigation à droite avec boutons -->
   <header>
     <nav>
       <a href="index.html">Accueil</a>
@@ -151,5 +149,44 @@
     <p>&copy; 2025 SunWave</p>
   </footer>
 
+  <!-- ✅ Compteur discret -->
+  <div id="visitor-counter"></div>
+
+  <script>
+    const compteur = document.getElementById("visitor-counter");
+    const today = new Date().toISOString().slice(0, 10);
+    const lastHit = localStorage.getItem("sunwave_hit_date");
+
+    if (lastHit !== today) {
+      fetch('https://api.countapi.xyz/hit/sunwave-rp.fr/accueil')
+        .then(res => res.json())
+        .then(data => {
+          localStorage.setItem("sunwave_hit_date", today);
+          updateVisitorDisplay(data.value);
+        });
+    } else {
+      fetch('https://api.countapi.xyz/get/sunwave-rp.fr/accueil')
+        .then(res => res.json())
+        .then(data => {
+          updateVisitorDisplay(data.value);
+        });
+    }
+
+    function updateVisitorDisplay(value) {
+      compteur.textContent = `👁️ ${value} visiteurs`;
+      compteur.style.position = "fixed";
+      compteur.style.bottom = "15px";
+      compteur.style.right = "20px";
+      compteur.style.fontSize = "0.85em";
+      compteur.style.color = "#ffffffaa";
+      compteur.style.background = "rgba(6, 25, 67, 0.7)";
+      compteur.style.padding = "5px 10px";
+      compteur.style.borderRadius = "8px";
+      compteur.style.boxShadow = "0 0 6px rgba(0,0,0,0.4)";
+      compteur.style.zIndex = "9999";
+    }
+  </script>
+
 </body>
 </html>
+
