@@ -28,25 +28,27 @@
 </head>
 <body>
 
+  <!-- Header dynamique -->
   <div id="include-header"></div>
 
   <main>
     🚧 Contenu prochainement 🚧
   </main>
 
+  <!-- Footer dynamique -->
   <div id="include-footer"></div>
 
   <script>
     fetch("header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("include-header").innerHTML = data;
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("include-header").innerHTML = html;
       });
 
     fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("include-footer").innerHTML = data;
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("include-footer").innerHTML = html;
       });
   </script>
 
