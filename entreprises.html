@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Entreprises - SunWave</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -17,7 +16,7 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 100px;
+      width: 200px; /* ✅ 2x plus grand */
       height: auto;
       z-index: 10;
       border-radius: 12px;
@@ -26,7 +25,7 @@
 
     header {
       background-color: #061943;
-      padding: 20px 20px 20px 160px; /* espace à gauche pour le logo */
+      padding: 20px 20px 20px 260px; /* ✅ marge + large à gauche */
       display: flex;
       justify-content: flex-end;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
@@ -41,14 +40,18 @@
     }
 
     nav a {
-      color: #ffffff;
       text-decoration: none;
+      padding: 10px 18px;
+      background-color: #1e90ff;
+      border-radius: 6px;
+      color: white;
       font-weight: bold;
-      transition: color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     nav a:hover {
-      color: #1e90ff;
+      background-color: #00bfff;
+      transform: translateY(-2px);
     }
 
     main {
@@ -129,9 +132,10 @@
 </head>
 <body>
 
-  <!-- Logo flottant -->
+  <!-- ✅ Logo flottant plus gros -->
   <img src="logo.jpeg" alt="Logo SunWave" class="logo-floating" />
 
+  <!-- ✅ Nav à droite avec boutons -->
   <header>
     <nav>
       <a href="index.html">Accueil</a>
@@ -202,4 +206,3 @@
 
 </body>
 </html>
-
