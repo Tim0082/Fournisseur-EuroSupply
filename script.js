@@ -1,20 +1,22 @@
 document.querySelectorAll('.accordion-header').forEach(button => {
   button.addEventListener('click', () => {
-    const active = button.classList.contains('active');
+    const isActive = button.classList.contains('active');
 
-    // Fermer tous les autres
+    // Ferme tout
     document.querySelectorAll('.accordion-header').forEach(btn => btn.classList.remove('active'));
     document.querySelectorAll('.accordion-content').forEach(content => {
       content.style.maxHeight = null;
       content.style.padding = '0 24px';
     });
 
-    // Ouvrir celui cliqué
-    if (!active) {
+    // Ouvre si pas déjà actif
+    if (!isActive) {
       button.classList.add('active');
       const content = button.nextElementSibling;
-      content.style.maxHeight = content.scrollHeight + 'px';
-      content.style.padding = '20px 24px';
+      if (content) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.padding = '20px 24px';
+      }
     }
   });
 });
