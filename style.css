@@ -10,13 +10,13 @@ body {
 /* ==== HEADER ==== */
 header {
   background-color: #061943;
-  padding: 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   position: relative;
   z-index: 5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 nav {
@@ -39,7 +39,7 @@ nav a:hover {
   background-color: #00bfff;
 }
 
-/* ==== LOGO FLOTTANT ==== */
+/* ==== LOGO FLOTTANT CENTRÉ ==== */
 .logo-floating {
   position: absolute;
   top: 80px;
@@ -47,9 +47,9 @@ nav a:hover {
   transform: translateX(-50%);
   width: 200px;
   height: auto;
-  z-index: 15;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
   pointer-events: none;
 }
 
@@ -265,4 +265,3 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
