@@ -1,23 +1,25 @@
 <style>
-  .logo-floating {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 200px;
-    height: auto;
-    z-index: 10;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  }
-  
   header {
     background-color: #061943;
-    padding: 20px 20px 20px 260px;
+    padding: 20px;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 5;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   }
 
   nav {
@@ -76,9 +78,11 @@
   }
 </style>
 
-<img src="logo.png" alt="Logo SunWave" class="logo-floating" />
-
 <header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Logo SunWave" />
+  </div>
+
   <nav>
     <a href="index.html">Accueil</a>
     <a href="entreprises.html">Entreprises</a>
@@ -94,3 +98,4 @@
     </div>
   </nav>
 </header>
+
