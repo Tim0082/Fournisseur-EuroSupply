@@ -15,18 +15,25 @@
     header {
       background-color: #061943;
       padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
+    .logo {
+      height: 60px;
+    }
+
     nav {
-      margin-top: 10px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
     }
 
     nav a {
       color: #ffffff;
       text-decoration: none;
-      margin: 0 12px;
       font-weight: bold;
       transition: color 0.3s ease;
     }
@@ -48,7 +55,6 @@
       margin-bottom: 20px;
     }
 
-    /* Intro spéciale SunWave */
     .intro-section {
       background-color: #061943;
       padding: 60px 30px;
@@ -105,9 +111,10 @@
 <body>
 
   <header>
+    <img src="logo.jpeg" alt="Logo SunWave" class="logo" />
     <nav>
-      <a href="index.html">Accueil</a> |
-      <a href="entreprises.html">Entreprises</a> |
+      <a href="index.html">Accueil</a>
+      <a href="entreprises.html">Entreprises</a>
       <a href="reglement.html">Règlement</a>
     </nav>
   </header>
@@ -139,4 +146,3 @@
 
 </body>
 </html>
-
