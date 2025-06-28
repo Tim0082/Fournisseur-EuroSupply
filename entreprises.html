@@ -23,37 +23,6 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
-    header {
-      background-color: #061943;
-      padding: 20px 20px 20px 260px;
-      display: flex;
-      justify-content: flex-end;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      position: relative;
-      z-index: 5;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    nav a {
-      text-decoration: none;
-      padding: 10px 18px;
-      background-color: #1e90ff;
-      border-radius: 6px;
-      color: white;
-      font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    nav a:hover {
-      background-color: #00bfff;
-      transform: translateY(-2px);
-    }
-
     main {
       padding: 40px;
       max-width: 1200px;
@@ -119,15 +88,6 @@
     .card a:hover {
       background-color: #00bfff;
     }
-
-    footer {
-      background-color: #061943;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #ffffffaa;
-    }
   </style>
 </head>
 <body>
@@ -191,14 +151,12 @@
   <div id="include-footer"></div>
 
   <script>
-    // Header
     fetch("header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("include-header").innerHTML = data;
       });
 
-    // Footer
     fetch("footer.html")
       .then(res => res.text())
       .then(data => {
@@ -208,3 +166,4 @@
 
 </body>
 </html>
+
