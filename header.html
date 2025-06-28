@@ -4,5 +4,62 @@
     <a href="index.html">Accueil</a>
     <a href="entreprises.html">Entreprises</a>
     <a href="reglement.html">Règlement</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Général ▾</button>
+      <div class="dropdown-content">
+        <a href="info.html">À savoir</a>
+        <a href="help.html">Aide dossier</a>
+        <a href="discord.html">Discord</a>
+      </div>
+    </div>
   </nav>
 </header>
+
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropbtn:hover {
+    background-color: #00bfff;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #061943;
+    min-width: 160px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    z-index: 1000;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #1e90ff;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
