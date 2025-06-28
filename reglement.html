@@ -17,16 +17,16 @@
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 200px; /* ✅ 2 fois plus grand que 100px */
+      width: 200px;
       z-index: 10;
       filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
     }
 
     header {
       background-color: #061943;
-      padding: 20px 20px 20px 240px; /* espace + large pour le logo */
+      padding: 20px 20px 20px 240px;
       display: flex;
-      justify-content: flex-end; /* ✅ Aligné à droite */
+      justify-content: flex-end;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
@@ -54,13 +54,6 @@
       padding: 40px;
       max-width: 1200px;
       margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 1.8em;
-      color: #1e90ff;
-      margin-bottom: 20px;
     }
 
     .section-title {
@@ -139,13 +132,10 @@
     }
   </style>
 </head>
-
 <body>
 
-  <!-- ✅ LOGO GROS ET FLOTTANT -->
   <img src="logo.jpeg" alt="Logo SunWave" class="logo-floating" />
 
-  <!-- ✅ HEADER NAV À DROITE -->
   <header>
     <nav>
       <a href="index.html">Accueil</a>
@@ -154,11 +144,10 @@
     </nav>
   </header>
 
-  <!-- ✅ CONTENU -->
   <main>
 
     <section class="reglement-section">
-      <h2 class="section-title">📘 Règlement Legal</h2>
+      <h2 class="section-title">📘 Règlement Légal</h2>
       <div class="accordeon">
         <div class="item">
           <button class="toggle">🚨 POINTS IMPORTANTS</button>
@@ -171,6 +160,13 @@
           <button class="toggle">⛔ COMPORTEMENT INAPPROPRIÉ SUR LE SERVEUR</button>
           <div class="content">
             <p>⛔ | Racisme, sexisme, HRP en vocal, streamhack, insultes OOC... on dégage direct. Respect & RP avant tout.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="toggle">👮 POLICE & LOI</button>
+          <div class="content">
+            <p>⚖️ | Les forces de l’ordre doivent jouer RP en toute circonstance. Abus de pouvoir, freejail = sanction directe.</p>
           </div>
         </div>
       </div>
@@ -187,9 +183,28 @@
         </div>
 
         <div class="item">
-          <button class="toggle">📌 Point Secondaire</button>
+          <button class="toggle">💣 GUNFIGHT / SCÈNES VIOLENTES</button>
           <div class="content">
-            <p>✅ | Gunfight sans contexte RP = non. Corruption flics ? Encadrée et validée.</p>
+            <p>🔫 | Les scènes armées doivent avoir un contexte RP. Les embuscades sans dialogue ou les fusillades gratuites = refusées.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button class="toggle">🕵️ INFILTRATION / CORRUPTION</button>
+          <div class="content">
+            <p>🧠 | Toute tentative de corruption ou d'infiltration doit être validée par un staff RP. Ne pas partir en freestyle solo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reglement-section">
+      <h2 class="section-title">📗 Règlement Factions / Jobs</h2>
+      <div class="accordeon">
+        <div class="item">
+          <button class="toggle">⚙️ À venir</button>
+          <div class="content">
+            <p>⏳ | Cette section sera remplie prochainement avec les règles spécifiques aux factions, entreprises et services publics.</p>
           </div>
         </div>
       </div>
@@ -214,3 +229,4 @@
 
 </body>
 </html>
+
