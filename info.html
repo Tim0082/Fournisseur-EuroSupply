@@ -15,31 +15,46 @@
 
     .tabs {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      background-color: #061943;
-      border-bottom: 2px solid #1e90ff;
+      background-color: transparent;
+      gap: 10px;
+      margin-top: 40px;
+      flex-wrap: wrap;
     }
 
     .tab-button {
-      padding: 14px 20px;
       background-color: #061943;
       color: white;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      border: 2px solid #1e90ff;
+      border-bottom: none;
+      padding: 12px 18px;
+      border-radius: 8px 8px 0 0;
       font-weight: bold;
-      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .tab-button:hover {
+      background-color: #1e90ff;
+      transform: translateY(-2px);
     }
 
     .tab-button.active {
-      border-bottom: 3px solid #1e90ff;
       background-color: #0a0f2c;
+      color: #1e90ff;
+      border-color: #1e90ff;
+      z-index: 2;
     }
 
     .tab-content {
-      display: none;
+      background-color: #0a0f2c;
       padding: 20px;
+      border: 2px solid #1e90ff;
+      border-radius: 0 8px 8px 8px;
+      margin-top: -2px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      display: none;
     }
 
     .tab-content.active {
@@ -48,7 +63,7 @@
 
     #tab-content {
       max-width: 1000px;
-      margin: 30px auto;
+      margin: 0 auto 30px auto;
       padding: 0 20px;
     }
 
@@ -86,7 +101,7 @@
   <!-- Header dynamique -->
   <div id="include-header"></div>
 
-  <!-- Menu onglets -->
+  <!-- Menu onglets style classeur -->
   <div class="tabs" id="tab-menu"></div>
 
   <!-- Contenu des onglets -->
